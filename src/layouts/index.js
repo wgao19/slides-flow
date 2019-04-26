@@ -6,6 +6,7 @@ import Swipeable from 'react-swipeable';
 import Transition from '../components/transition';
 
 import './index.css';
+import './prism-reset.css';
 
 const Header = ({ name, title, date }) => (
   <header>
@@ -71,7 +72,9 @@ class TemplateWrapper extends Component {
           onSwipedRight={this.swipeRight}
         >
           <Transition location={location}>
-            <div id="slide" style={{'width': '100%'}}>{children}</div>
+            <div id="slide" style={{ width: '100%' }}>
+              {children}
+            </div>
           </Transition>
         </Swipeable>
       </div>
